@@ -27,7 +27,7 @@ This option is preferred as directly editing `.service` files should be avoided.
 ```sh
 [Service]
 ExecStart=
-ExecStart=/usr/bin/dockerd -g /new/docker/root -H fd://
+ExecStart=/usr/bin/dockerd --data-root /home/docker -H unix://
 ```
 
 * `systemctl daemon-reload`
